@@ -1,0 +1,104 @@
+@startuml
+
+class InventoryTrackerApplication {
+    start()
+    main()
+}
+
+class SceneOperator {
+
+}
+
+class InventoryTrackerController {
+
+}
+
+class AddItemController {
+
+}
+
+class EditItemController {
+
+}
+
+class RemoveItemController {
+
+}
+
+class SearchItemController {
+
+}
+
+class ErrorController {
+
+}
+
+class InventoryList {
+    - items: ArrayList<Item>
+
+    + addItem(item: Item): void
+    + deleteItem(serialNumber: String): void
+    + getInventoryItem(serialNumber:String): void
+}
+
+class ErrorOperator {
+    + checkLength(item:Item, name:String): int
+    + isUnique(inventoryList:InventoryList, serialNumber:String): boolean
+}
+
+class Item {
+    - name: SimpleStringProperty
+    - serialNumber: SimpleStringProperty
+    - value: SimpleDoubleProperty
+
+    + getName(): name: String
+    + setName(name: String): void
+    + nameProperty(): void
+
+    + getSerialNumber(): serialNumber: String
+    + setSerialNumber(serialNumber: String): void
+    + serialNumberProperty(): void
+
+    + getValue(): value: double
+    + setValue(value: double): void
+    + valueProperty(): void
+}
+
+class FileOperator {
+    + saveAsTSV(fileName: File, data: String)
+    + saveAsHTML(fileName: File, data: String)
+    + saveAsJSON(fileName: File, data: String)
+
+    + loadFromTSV(fileName: File): InventoryList
+    + loadFromHTML(fileName: File): InventoryList
+    + loadFromJSON(fileName: File): InventoryList
+}
+
+enum Views {
+
+}
+
+javafx.org.Application <|-- InventoryTrackerApplication
+InventoryTrackerApplication -- SceneOperator
+
+SceneOperator -- InventoryTrackerController
+SceneOperator -- AddItemController
+SceneOperator -- EditItemController
+SceneOperator -- RemoveItemController
+SceneOperator -- SearchItemController
+SceneOperator -- ErrorController
+SceneOperator o-- Views
+
+InventoryTrackerController o-- InventoryList
+InventoryTrackerController o-- FileOperator
+
+AddItemController o-- InventoryList
+EditItemController o-- InventoryList
+RemoveItemController o-- InventoryList
+SearchItemController o-- InventoryList
+ErrorController o-- InventoryList
+
+InventoryList -- ErrorOperator
+InventoryList *-- Items
+
+@enduml
