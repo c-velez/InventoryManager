@@ -1,4 +1,4 @@
-# COP3330 Assignment 5
+# Inventory Management Application
 
 ## Overview
 
@@ -73,14 +73,6 @@ You will be responsible for both the design (UML diagrams) and implementation (p
 ~~~
 
 - [x] You **shall** place your code within a package named ucf.assignments
-
-- [x] You **shall** include the following comment that the top of *each* of your *.java files (with the appropriate substitution in place)
-~~~
-/*
- *  UCF COP3330 Summer 2021 Assignment 5 Solution
- *  Copyright 2021 first_name last_name
- \*/
-~~~
 
 - [x] You **shall** create a Class Diagram for your application using PlantUML. This diagram must be pushed to your Git repository along with your java code
     - Each class within your diagram must list both the attributes and methods defined within that class
