@@ -28,7 +28,7 @@ $599.99     S40AZBDE4       Samsung TV
         - [x] Rqmt 13aiii: JSON files shall contain valid JSON and end with the extension .json
     - [x] Rqmt 13b: The user shall provide the file name and file location of the file to save
 - [x] Rqmt 14: The user shall be able to load inventory items from a file that was previously created by the application
-      - [x] Rqmt 14a: The user shall provide the file name and file location of the file to load
+    - [x] Rqmt 14a: The user shall provide the file name and file location of the file to load
 - [x] Rqmt 8: The user shall be able to sort the inventory items by value
 - [x] Rqmt 9: The user shall be able to sort the inventory items by serial number
 - [x] Rqmt 10: The user shall be able to sort the inventory items by name
